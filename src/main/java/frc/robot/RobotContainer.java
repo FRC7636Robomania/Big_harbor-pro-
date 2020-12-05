@@ -55,25 +55,25 @@ public class RobotContainer {
     Pneumatic();
   }
   private void joystickMapping() {
-    // new JoystickButton(m_Joystick, Button.intake_opp)         .whenHeld(new SpinForward(m_Intake) )
-    //                                                           .whenHeld(new SpinForward(m_Conveyor))
-    //                                                           .whenHeld(new SpinForward(m_Wing));
+    new JoystickButton(m_Joystick, Button.intake_opp)         .whenHeld(new SpinReverse(m_Intake) )
+                                                              .whenHeld(new SpinReverse(m_Conveyor))
+                                                              .whenHeld(new SpinReverse(m_Wing));
     new JoystickButton(m_Joystick, Button.intake)             .whenHeld(new SpinForward(m_Intake))
                                                               .whenHeld(new SpinForward(m_Wing));
 
     new JoystickButton(m_XboxController,Button.conveyor)      .whenHeld(new SpinForward(m_Conveyor));
     new JoystickButton(m_XboxController, Button.flySpin)      .whenHeld(new SpinForward(m_Shooter));
     new JoystickButton(m_XboxController, Button.emergency_shoot).whenHeld(new InstantCommand(()->m_Shooter.percentOutput(0.8)))
-                                                                .whenReleased(new InstantCommand(()->m_Shooter.percentOutput(0.0)));
-    new JoystickButton(m_XboxController,Button.arm_out)       .whenHeld(new ArmOut(m_Arm));
-    new JoystickButton(m_XboxController,Button.arm_in)        .whenHeld(new ArmIn(m_Arm));
+                                                              .whenReleased(new InstantCommand(()->m_Shooter.percentOutput(0.0)));
+    new JoystickButton(m_Joystick,Button.arm_out)             .whenHeld(new ArmOut(m_Arm));
+    new JoystickButton(m_Joystick,Button.arm_in)              .whenHeld(new ArmIn(m_Arm));
     new JoystickButton(m_Joystick,Button.rack_up)             .whenHeld(new SpinForward(m_Rack));
     new JoystickButton(m_Joystick,Button.rack_down)           .whenHeld(new SpinReverse(m_Rack));
     new JoystickButton(m_Joystick, Button.turretleft)         .whenHeld(new SpinForward(m_Tower));
     new JoystickButton(m_Joystick, Button.turretRight)        .whenHeld(new SpinReverse(m_Tower));
     // new JoystickButton(m_XboxController, 6)                   .whenH
-    new JoystickButton(m_XboxController, 6)       .whenHeld(new RunCommand(()->m_Tower.aim(), m_Tower))//.withInterrupt(this::getAimButton))
-    .whenReleased(new InstantCommand(()->m_Tower.stop(), m_Tower));
+    // new JoystickButton(m_XboxController, 6)       .whenHeld(new RunCommand(()->m_Tower.aim(), m_Tower))//.withInterrupt(this::getAimButton))
+    // .whenReleased(new InstantCommand(()->m_Tower.stop(), m_Tower));
   }
   public void rackInit(){
     m_Rack.initial();

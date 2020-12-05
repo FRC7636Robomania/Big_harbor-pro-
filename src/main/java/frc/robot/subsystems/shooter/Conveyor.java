@@ -38,8 +38,8 @@ public class Conveyor extends Spinable {
 
   @Override
   public void forward() {
-    if(shooter.getflywheelVelocity()>=10000){
-      conveyor.set(ControlMode.PercentOutput ,-0.8);
+    if(shooter.getflywheelVelocity()>=4000){
+      conveyor.set(ControlMode.PercentOutput ,0.8);
       SmartDashboard.putString("Shooter Status","forward");
     }else if(shooter.getflywheelVelocity()<10000){
       conveyor.set(ControlMode. PercentOutput , 0 );
@@ -56,7 +56,7 @@ public class Conveyor extends Spinable {
 
   @Override
   public void reverse() {
-    conveyor.set(ControlMode. PercentOutput , 0.8 );
+    conveyor.set(ControlMode. PercentOutput , -0.8 );
     SmartDashboard.putString("Shooter Status","reverse");
   }
 

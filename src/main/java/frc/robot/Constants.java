@@ -31,7 +31,7 @@ public final class Constants {
         
         public static final double flywheel_kF  = 0.506; 
         public static final double flywheel_kP  = 0.1;
-        public static final double flywheelvel  = 10000;
+        public static final double flywheelvel  = 21600;
         
         public static final int wingMiddle    = 2;
         public static final int wingRight     = 1;
@@ -71,9 +71,7 @@ public final class Constants {
     public static class Button{
         //XboxController
         public static final int flySpin         = 1;           //飛輪啟用
-        public static final int conveyor        = 2;           //送球保險
-        public static final int arm_out         = 3;           //手臂出去
-        public static final int arm_in          = 4;           //手臂進來
+        public static final int conveyor        = 6;           //送球保險
         public static final int emergency_shoot = 5;           //緊急發射
 
         //Joystick
@@ -85,6 +83,8 @@ public final class Constants {
         public static final int turretRight     = 6;           //轉塔右
         public static final int intake_opp      = 7;           //進球反轉(包括送球三個馬達+吸球)
         public static final int rackZero        = 9;           //齒條歸零
+        public static final int arm_out         = 11;           //手臂出去
+        public static final int arm_in          = 12;           //手臂進來
         //public static final int one             = 10;          //一號洞
         //public static final int nine            = 11;          //九號洞
         //public static final int three           = 12;          //三號洞

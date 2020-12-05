@@ -45,8 +45,8 @@ public class Shooter extends Spinable {
 		flywheelRight.setSelectedSensorPosition(0, 0, PowCon.kTimeoutMs);
 
     //PeakOutput , CurrentLimit , NeutralDeadband 
-    flywheelLeft.configPeakOutputForward(0.7, PowCon.kTimeoutMs);
-    flywheelRight.configPeakOutputForward(0.7, PowCon.kTimeoutMs);
+    flywheelLeft.configPeakOutputForward(1, PowCon.kTimeoutMs);
+    flywheelRight.configPeakOutputForward(1, PowCon.kTimeoutMs);
     flywheelLeft.configSupplyCurrentLimit(supplyCurrentLimitConfiguration);
     flywheelRight.configSupplyCurrentLimit(supplyCurrentLimitConfiguration);
     
